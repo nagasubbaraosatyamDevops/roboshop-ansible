@@ -1,0 +1,27 @@
+
+
+- name: Install Nodejs
+  ansible.builtin.yum:
+          name: nodejs
+          state: installed
+
+- name: App pre-requisites
+  ansible.builtin.import_tasks: app-preq.yml
+
+- name: download Nodejs Dependencies
+  ansible.builtin.shell: npm install
+  args:
+    chdir:/app
+
+- name: Schema setup
+  ansible.builtin.import_tasks: mongo-schema.yml
+
+- name: Systemd setup
+  ansible.builtin.import_tasks: systemd-setup.yml
+
+
+
+
+
+
+
