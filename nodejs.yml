@@ -1,4 +1,5 @@
-
+- name: Install Nodejs repos
+  ansible.builtin.shell:
 
 - name: Install Nodejs
   ansible.builtin.yum:
@@ -11,7 +12,7 @@
 - name: download Nodejs Dependencies
   ansible.builtin.shell: npm install
   args:
-    chdir:/app
+    chdir: /app
 
 - name: Schema setup
   ansible.builtin.import_tasks: mongo-schema.yml
