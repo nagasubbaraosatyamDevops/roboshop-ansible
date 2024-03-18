@@ -1,6 +1,3 @@
-- name: Install Nodejs repos
-  ansible.builtin.shell:
-
 - name: Install Nodejs
   ansible.builtin.yum:
           name: nodejs
