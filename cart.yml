@@ -1,9 +1,9 @@
-- name: Catalogue SetUP
+- name: Cart SetUP
   hosts: all
   become: true
   vars:
     component: catalogue
-    schema: true
+    schema: cart
   tasks:
     - name: Include task list in play
       ansible.builtin.import_tasks: nodejs.yml

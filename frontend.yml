@@ -14,7 +14,8 @@
 
     - name: Recursively remove file
       ansible.builtin.file:
-        path: /usr/share/nginx/html
+        path: /usr/share/nginx/htmlexit
+
         state: absent
 
     - name: create new directory
