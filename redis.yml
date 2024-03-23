@@ -12,7 +12,7 @@
 
     - name: Install redis
       ansible.builtin.yum:
-        - name: yum install redis -y
+        - name: redis
           state: started
 
     - name: update Listen Address /etc/redis.conf
