@@ -1,5 +1,5 @@
 - name: Redis setup
-  host: all
+  hosts: all
   become: yes
   tasks:
     - name : Install Redis repo
