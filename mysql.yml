@@ -5,7 +5,7 @@
     - name : Configure yum repo File
       ansible.builtin.copy:
         src: mysql.repo
-        des: /etc/yum.repos.d/mysql.repo
+        dest: /etc/yum.repos.d/mysql.repo
 
     - name: Disable Mysql Module
       ansible.builtin.shell: dnf module disable mysql -y
