@@ -1,0 +1,8 @@
+- name: Payment SetUP
+  hosts: all
+  become: true
+  vars:
+    component: Payment
+  tasks:
+    - name: Include task list in play
+      ansible.builtin.import_tasks: python.yml
