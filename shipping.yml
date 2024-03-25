@@ -1,0 +1,9 @@
+- name: Shipping SetUP
+  hosts: all
+  become: true
+  vars:
+    component: shipping
+    schema: true
+  tasks:
+    - name: Include task list in play
+      ansible.builtin.import_tasks: java.yml
